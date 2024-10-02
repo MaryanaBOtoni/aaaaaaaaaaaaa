@@ -1,0 +1,136 @@
+/* Weather.css */
+
+/* Importando o Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+body, html {
+    padding: 0; /* Remover preenchimento do body e html */
+    margin: 0; /* Remover margens do body e html */
+    background: linear-gradient(to bottom, #acf1fa, hsla(187, 76%, 76%, 0.425)); /* Gradiente suave */
+}
+
+.weather-page {
+    padding-top: 70px; /* Ajuste este valor para a altura real do cabeçalho */
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column; /* Colunas em coluna quando necessário */
+    align-items: center; /* Centraliza os itens */
+}
+
+.weather-columns {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as colunas quebrem para a linha de baixo */
+    justify-content: center; /* Centraliza as colunas */
+}
+
+.weather-info {
+    background-color: rgba(160, 194, 199, 0.918);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    margin: 10px; /* Espaçamento entre as colunas */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+.weather-info:hover {
+    transform: translateY(-5px); /* Leve movimento ao passar o mouse */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.39);
+}
+
+.weather-info h2 {
+    color: #fdd700; /* Azul forte */
+    font-size: 2rem; /* Tamanho maior para destaque */
+    margin-bottom: 15px;
+}
+
+.good-weather {
+    color: #2ecc71; /* Verde claro */
+    font-weight: bold;
+}
+
+.bad-weather {
+    color: #e74c3c; /* Vermelho */
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo do mapa */
+.leaflet-container {
+    border-radius: 15px; /* Bordas arredondadas */
+}
+
+/* Estilo do cabeçalho fixo */
+.app-header {
+    position: fixed; /* Mantém o cabeçalho fixo no topo */
+    top: 0;
+    width: 100%;
+    background-color: #44b4b4a1; /* Cor de fundo do cabeçalho */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.425); /* Sombra para destaque */
+    z-index: 1000; /* Mantém o cabeçalho acima de outros elementos */
+    padding: 10px 0; /* Espaçamento vertical */
+    transition: background-color 0.3s; /* Transição suave para mudanças */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Limita a largura do cabeçalho */
+    margin: 0 auto; /* Centraliza o cabeçalho */
+    padding: 0 20px; /* Espaçamento lateral */
+}
+
+.logo {
+    font-size: 24px; /* Tamanho do texto do logo */
+    color: white; /* Cor do texto do logo */
+}
+
+.nav-menu {
+    display: flex; /* Exibe os itens de menu em linha */
+    gap: 20px; /* Espaçamento entre os itens */
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento da lista */
+    margin: 0; /* Remove a margem da lista */
+}
+
+.nav-link {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 18px; /* Tamanho do texto dos links */
+    transition: color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.nav-link:hover {
+    color: #FFD700; /* Cor ao passar o mouse */
+}
+
+.logout-btn {
+    background: none; /* Remove fundo do botão */
+    border: none; /* Remove bordas */
+    color: white; /* Cor do texto do botão */
+    font-size: 18px; /* Tamanho do texto do botão */
+    cursor: pointer; /* Cursor pointer ao passar o mouse */
+    transition: color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.logout-btn:hover {
+    color: #FFD700; /* Cor ao passar o mouse no botão de logout */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 20px; /* Reduz o tamanho do logo em telas menores */
+    }
+    .nav-link {
+        font-size: 16px; /* Reduz o tamanho do texto dos links em telas menores */
+    }
+}
